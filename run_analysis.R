@@ -22,6 +22,7 @@ MS_ALL$Y_observations <- factor(MS_ALL$Y_observations, levels = aLabels[, 1], la
 #label data set with descriptive variable names.
 gsub("mean","Mean value ",colnames(MS_ALL))
 gsub("std"," standard deviation",colnames(MS_ALL))
+#make new set
 Tidy_Data<-MS_ALL %>% 
   group_by(S_observations,Y_observations)%>%
   summarise_each(funs(mean))
