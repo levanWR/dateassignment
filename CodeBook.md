@@ -15,9 +15,7 @@
 #MS_ALL contains columns from ALL with latter names.
 
 #"Y_observations" and "S_observations" stands fro activity and subjects respectively
-
 using activity_labels we name activities, change word "mean" and "std" in colnames with "Mean value " and " standard deviation" respectively and finally we create new tidy data 
-
 with the average of each variable for each activity and each subject.
 
 
