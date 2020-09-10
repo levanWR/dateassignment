@@ -32,8 +32,31 @@
 
 #ALL contains this latter three variable combined using column bind.
 
-# third part assigns names to columns in ALL data.set using colnames(ALL).
+# third part.
 
-#names are extracted from features data set.
+#third part assigns names to columns in ALL data.set using colnames(ALL).
 
-#
+#names are extracted from features data set and assigned it to collumns exept first and last.
+
+#first column received name "subjectID" and last received name "activityID".
+
+#grepl function creates logical vector containing TRUE where column name included "subjectID", "activityID", "mean" or "std". MS_ALL is data set which contains only latter columns.
+
+# fourth part
+
+#fourth part assigns labels to activityID column
+
+
+# fifth part
+
+#fifth part changes words in colnames. "mean" with "Mean Value" and "std" with "standard deviation" in order to be more understandable and finally create Tidy_Data containing data frame grouped by "subjectID" and "activityID" with average of each variable for each activity and each subject.
+
+#write.table function writes this data set in text file "Tidy_Data.txt" 
+
+
+
+
+
+
+
+
