@@ -53,6 +53,8 @@
 
 #write.table function writes this data set in text file "Tidy_Data.txt" 
 
+#for more detailed information about this project please see README.md
+
 
 
 
