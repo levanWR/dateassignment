@@ -1,21 +1,39 @@
-#run_analysis.R contains r script.
+#This CodeBook describes variables and actions in the "run_analysis.R" file containing R code. 
 
-#xTrain, yTrain and sTrain contains train data , xTest, yTest and sTest contains test data.
+#Library "dplyr" was used.
 
-#X contains row binded train and test data for values
+# First section of this code reads data as follows:
 
-#Y contains train and test data for activity 
+#xTrain reads and contains data from "X_train.txt" file.
 
-#S contains train and test data for subjects
+#yTrain reads and contains data from "Y_train.txt" file.
 
-#ALL contains this three data.frame column binded.
+#sTrain reads and contains data from "subject_train.txt" file.
 
-#MS contains coordinats of names which contains "mean", "std", "S_observations" or "Y_observations" in the name.
+#xTest reads and contains data from "X_test.txt" file.
 
-#MS_ALL contains columns from ALL with latter names.
+#yTest reads and contains data from "Y_test.txt" file.
 
-#"Y_observations" and "S_observations" stands fro activity and subjects respectively
-using activity_labels we name activities, change word "mean" and "std" in colnames with "Mean value " and " standard deviation" respectively and finally we create new tidy data 
-with the average of each variable for each activity and each subject.
+#sTest reads and contains data from "subject_test.txt" file.
 
+#features reads and contains data from "afeatures.txt" file.
 
+#aLabels reads and contains data from "activity_labels.txt" file.
+
+#First six variable is train and test data. features contains names of all variables used for experiment. aLabels is data.frame containing activity ID in first and activity label in second column.
+
+# second part merges data as follows:
+
+#X contains train and test data from xTrain and xTest using row bind.
+
+#Y contains train and test data from yTrain and ytest using row bind.
+
+#S contains train and test data from sTrain and sTest using row bind.
+
+#ALL contains this latter three variable combined using column bind.
+
+# third part assigns names to columns in ALL data.set using colnames(ALL).
+
+#names are extracted from features data set.
+
+#
